@@ -3,11 +3,9 @@ import requests
 events_store_url = "http://127.0.0.1:8020"
 
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-params = {"user_id": 1337055, "item_id": 17245}
+params = {"user_id": 1291248, "item_id": 17245}
 
-resp = requests.post(events_store_url + "/get",
-                     headers=headers,
-                     params={"user_id": 1127794, "k": 3})
+resp = requests.post(events_store_url + "/put", headers=headers, params=params)
 if resp.status_code == 200:
     result = resp.json()
 else:
